@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "C01_bis",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "C01_bis::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-C01_bis-Debug-223448401c665586a4b4.json",
+					"name" : "C01_bis",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/anis/Sync/01_ETS/01_Cours/INF155/2022-1H/INF155-20221-Cours/Gr02/C01-bis/cmake-build-debug",
+		"source" : "/Users/anis/Sync/01_ETS/01_Cours/INF155/2022-1H/INF155-20221-Cours/Gr02/C01-bis"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
