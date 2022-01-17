@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RappelsPrintf", "RappelsPri
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExerciceIfElse", "ExerciceIfElse\ExerciceIfElse.vcxproj", "{1F641F64-1881-4DD9-91D8-EBD96E8FCBFF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Expressions", "Expressions\Expressions.vcxproj", "{FE42EEBB-76E2-48CB-9F3A-4D2B202B765E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{1F641F64-1881-4DD9-91D8-EBD96E8FCBFF}.Release|x64.Build.0 = Release|x64
 		{1F641F64-1881-4DD9-91D8-EBD96E8FCBFF}.Release|x86.ActiveCfg = Release|Win32
 		{1F641F64-1881-4DD9-91D8-EBD96E8FCBFF}.Release|x86.Build.0 = Release|Win32
+		{FE42EEBB-76E2-48CB-9F3A-4D2B202B765E}.Debug|x64.ActiveCfg = Debug|x64
+		{FE42EEBB-76E2-48CB-9F3A-4D2B202B765E}.Debug|x64.Build.0 = Debug|x64
+		{FE42EEBB-76E2-48CB-9F3A-4D2B202B765E}.Debug|x86.ActiveCfg = Debug|Win32
+		{FE42EEBB-76E2-48CB-9F3A-4D2B202B765E}.Debug|x86.Build.0 = Debug|Win32
+		{FE42EEBB-76E2-48CB-9F3A-4D2B202B765E}.Release|x64.ActiveCfg = Release|x64
+		{FE42EEBB-76E2-48CB-9F3A-4D2B202B765E}.Release|x64.Build.0 = Release|x64
+		{FE42EEBB-76E2-48CB-9F3A-4D2B202B765E}.Release|x86.ActiveCfg = Release|Win32
+		{FE42EEBB-76E2-48CB-9F3A-4D2B202B765E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
