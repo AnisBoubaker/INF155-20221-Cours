@@ -45,13 +45,13 @@ int main(void)
 	printf("La valeur de val1: %d\n", val1);
 
 
-	//temperature; 
+	temperature =0; 
 
 	valeurCondition = (temperature < 0);
 
-	if( temperature  )
+	if( temperature != 0  )
 	{
-		printf("Il fait froid. \n");
+		printf("La temperature est non nulle. \n");
 	}
 
 	printf("La valeur de la condition est: %d\n", valeurCondition);
