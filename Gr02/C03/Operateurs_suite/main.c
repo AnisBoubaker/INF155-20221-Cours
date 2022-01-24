@@ -18,7 +18,7 @@ int main(void)
 	printf("val2: ");
 	scanf("%d", &val2);
 
-	if ( val1 )
+	if ( val1 > 0 )
 	{
 		printf("La valeur de val1 est differente de 0. \n");
 	}
