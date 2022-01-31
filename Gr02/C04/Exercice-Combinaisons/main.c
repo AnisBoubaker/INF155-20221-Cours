@@ -47,7 +47,7 @@ int main(void)
 
 	int nb_combinaisons; 
 
-	int cpt; 
+	//int cpt; 
 
 	printf("Valeur de n: ");
 	scanf("%d", &n);
