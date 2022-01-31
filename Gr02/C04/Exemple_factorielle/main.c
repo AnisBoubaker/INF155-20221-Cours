@@ -19,7 +19,7 @@ int main(void)
 	int factorielle;
 	int max;
 
-	factorielle = 1;
+	factorielle = 0;
 
 	printf("saisir le max: ");
 	scanf("%d", &max);
