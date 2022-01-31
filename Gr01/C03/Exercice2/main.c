@@ -10,3 +10,39 @@ de saisie
 - Finalement convertir le programme en utilisant les boucles. 
 
 */
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int saisie; 
+	double moyenne; 
+	int cpt; 
+
+	int nb_valeurs = 5;
+
+
+	printf("Combien de valeurs? ");
+	scanf("%d", &nb_valeurs);
+
+	moyenne = 0;
+	cpt = 0; 
+	while (cpt < nb_valeurs )
+	{
+		printf("Saisir un entier: ");
+		scanf("%d", &saisie);
+		moyenne = moyenne + saisie;
+		cpt++;
+	}
+
+
+	moyenne = moyenne / nb_valeurs;
+
+	printf("La moyenne est: %.2lf \n", moyenne);
+
+	system("pause");
+	return EXIT_SUCCESS;
+}
