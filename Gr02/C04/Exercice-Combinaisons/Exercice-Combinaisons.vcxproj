@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{1A9ED8CC-4913-41D3-90C6-44D4F6BBFE54}</ProjectGuid>
-    <RootNamespace>ExerciceValidation</RootNamespace>
+    <ProjectGuid>{65E42259-D287-4975-8BF9-8756C5E83E1D}</ProjectGuid>
+    <RootNamespace>ExerciceCombinaisons</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
