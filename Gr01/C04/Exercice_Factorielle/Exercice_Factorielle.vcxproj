@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{4CADCCDB-5DE4-4BDC-A8E6-A184B52B2AC2}</ProjectGuid>
-    <RootNamespace>ExerciceValidation</RootNamespace>
+    <ProjectGuid>{CE3183AE-FEDE-4A4E-ACC8-004D5E17D27B}</ProjectGuid>
+    <RootNamespace>ExerciceFactorielle</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,7 +123,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
