@@ -15,10 +15,84 @@ en langage C, il faut le calculer vous même.
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
+
+//Définition de la fonction
+int factorielle(int nb)
+{
+	int resultat;
+	int i; 
+
+	resultat = 1;
+	for (i = 1; i <= nb; i++)
+	{
+		resultat *= i;
+	}
+
+	return resultat; 
+}
+
+
+/*
+Calcule le nombre de combinaisons possibles si on itre nb_par_tirage éléments
+parmi nb_elements. 
+*/
+int nb_combinaisons(int nb_elements, int nb_par_tirage)
 {
 
+}
 
+
+
+
+int main(void)
+{
+	int n; //Nombre de boules
+	int k;  //Boules tirées par tirage
+	int i; //Compteur de boucle
+	
+	int fact_n;
+	int fact_k;
+	int fact_n_k;
+
+	int resultat; 
+
+	printf("Entrer le nombre d'elements: ");
+	scanf("%d", &n);
+
+	printf("Entrer le nombre d'elements par tirage: ");
+	scanf("%d", &k);
+
+	/*fact_n = 1;
+	for (i = 1; i <= n; i++)
+	{
+		fact_n = fact_n * i;
+	}
+	
+	fact_k = 1;
+	for (i = 1; i <= k; i++)
+	{
+		fact_k = fact_k * i;
+	}
+
+	fact_n_k = 1;
+	for (i = 1; i <= n-k; i++)
+	{
+		fact_n_k = fact_n_k * i;
+	}
+	*/
+
+	int x; 
+
+	x = factorielle(10);
+
+	fact_n = factorielle(n);
+	fact_k = factorielle(k);
+	fact_n_k = factorielle(n - k);
+	
+
+	resultat = fact_n / (fact_k * fact_n_k);
+
+	printf("Le nombre de combinaisons possibles: %d\n", resultat);
 
 	system("pause");
 	return EXIT_SUCCESS;
