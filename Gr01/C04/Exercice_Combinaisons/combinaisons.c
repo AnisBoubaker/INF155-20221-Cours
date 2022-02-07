@@ -38,7 +38,24 @@ parmi nb_elements.
 */
 int nb_combinaisons(int nb_elements, int nb_par_tirage)
 {
+	int fact_nb_elements; 
+	int fact_nb_par_tirage;
+	int fact_difference; 
 
+	int resultat; 
+
+	fact_nb_elements = factorielle(nb_elements);
+	fact_nb_par_tirage = factorielle(nb_par_tirage);
+	fact_difference = factorielle(nb_elements - nb_par_tirage);
+
+	resultat = fact_nb_elements / (fact_nb_par_tirage * fact_difference); 
+
+	return resultat; 
+
+	/*
+	
+	return factorielle(nb_elements) / (factorielle(nb_par_tirage) * factorielle(nb_elements - nb_par_tirage);
+	*/
 }
 
 
@@ -48,11 +65,6 @@ int main(void)
 {
 	int n; //Nombre de boules
 	int k;  //Boules tirées par tirage
-	int i; //Compteur de boucle
-	
-	int fact_n;
-	int fact_k;
-	int fact_n_k;
 
 	int resultat; 
 
@@ -62,38 +74,63 @@ int main(void)
 	printf("Entrer le nombre d'elements par tirage: ");
 	scanf("%d", &k);
 
-	/*fact_n = 1;
-	for (i = 1; i <= n; i++)
-	{
-		fact_n = fact_n * i;
-	}
-	
-	fact_k = 1;
-	for (i = 1; i <= k; i++)
-	{
-		fact_k = fact_k * i;
-	}
-
-	fact_n_k = 1;
-	for (i = 1; i <= n-k; i++)
-	{
-		fact_n_k = fact_n_k * i;
-	}
-	*/
-
-	int x; 
-
-	x = factorielle(10);
-
-	fact_n = factorielle(n);
-	fact_k = factorielle(k);
-	fact_n_k = factorielle(n - k);
-	
-
-	resultat = fact_n / (fact_k * fact_n_k);
+	resultat = nb_combinaisons(n, k);
 
 	printf("Le nombre de combinaisons possibles: %d\n", resultat);
 
 	system("pause");
 	return EXIT_SUCCESS;
 }
+
+
+
+//int main(void)
+//{
+//	int n; //Nombre de boules
+//	int k;  //Boules tirées par tirage
+//	int i; //Compteur de boucle
+//
+//	int fact_n;
+//	int fact_k;
+//	int fact_n_k;
+//
+//	int resultat;
+//
+//	printf("Entrer le nombre d'elements: ");
+//	scanf("%d", &n);
+//
+//	printf("Entrer le nombre d'elements par tirage: ");
+//	scanf("%d", &k);
+//
+//	/*fact_n = 1;
+//	for (i = 1; i <= n; i++)
+//	{
+//		fact_n = fact_n * i;
+//	}
+//
+//	fact_k = 1;
+//	for (i = 1; i <= k; i++)
+//	{
+//		fact_k = fact_k * i;
+//	}
+//
+//	fact_n_k = 1;
+//	for (i = 1; i <= n-k; i++)
+//	{
+//		fact_n_k = fact_n_k * i;
+//	}
+//	*/
+//
+//
+//	/*fact_n = factorielle(n);
+//	fact_k = factorielle(k);
+//	fact_n_k = factorielle(n - k);*/
+//
+//
+//	resultat = nb_combinaisons(n, k);
+//
+//	printf("Le nombre de combinaisons possibles: %d\n", resultat);
+//
+//	system("pause");
+//	return EXIT_SUCCESS;
+//}
