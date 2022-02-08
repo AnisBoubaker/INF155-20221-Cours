@@ -23,10 +23,13 @@ double min_trois(double val1, double val2, double val3)
 {
 	double min = val1; 
 
+	printf("Calcul du min: ");
+
 	if (val2 < min)
 	{
 		min = val2;
 	}
+
 
 	if (val3 < min)
 	{
@@ -50,25 +53,39 @@ int afficher_menu(void)
 	return choix;
 }
 
+
+void bidon(int une_valeur)
+{
+	une_valeur = une_valeur * 100; 
+}
+
 int main(void)
 {
-	double v1, v2, v3; 
+
+	int ma_var = 10; 
+
+	bidon(ma_var);
+
+	printf("%d", ma_var);
+
+
+	/*double val1, val2, val3; 
 	double le_min;
 	int choix;
 
 	printf("Saisir la vakleur 1: ");
-	scanf("%lf", &v1);
+	scanf("%lf", &val1);
 
 	printf("Saisir la vakleur 2: ");
-	scanf("%lf", &v2);
+	scanf("%lf", &val2);
 
 	printf("Saisir la vakleur 3: ");
-	scanf("%lf", &v3);
+	scanf("%lf", &val3);
 
 	//Inutile, la valeur retournée par la fonction est perdue. 
 	//min_trois(v1, v2, v3); 
 
-	le_min = min_trois(v1, v2, v3);
+	le_min = min_trois(val1, val2, val3);
 
 	printf("La plus petite valeur: %lf\n",  le_min  );
 
@@ -76,7 +93,7 @@ int main(void)
 	//Affichage du menu
 	choix = afficher_menu();
 
-	printf("Vous avez choisi: %d\n", choix);
+	printf("Vous avez choisi: %d\n", choix);*/
 
 	system("pause");
 	return EXIT_SUCCESS;
