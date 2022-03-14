@@ -1,28 +1,30 @@
 
+//IMPORTANT : Toujours inclure le .h du module dans le fichier .c
+//Toujours entre " ... "
+#include "tab2d.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-
-#define NB_MAX_LIGNES 6
-#define NB_MAX_COLONNES 5
-
-int main(void)
+void afficher_tab2d(int tablo2d[][NB_MAX_COLONNES], int nb_lignes, int nb_colonnes)
 {
-
-	int tab2d[NB_MAX_LIGNES][NB_MAX_COLONNES] = { {5, 7, 8, 9}, {11, 21, 10}, {15, 2, 3} };
-	
-	printf("La case qui a pour indice 4, 2: %d\n", tab2d[4][2]);
-
-	for (int ligne = 0; ligne < NB_MAX_LIGNES; ligne++)
-	{ //ligne = 1
-		for (int colonne = 0; colonne < NB_MAX_COLONNES; colonne++)
+	for (int ligne = 0; ligne < nb_lignes; ligne++)
+	{
+		for (int colonne = 0; colonne < nb_colonnes; colonne++)
 		{ //colonne = 1
-			printf("%d\t", tab2d[ligne][colonne]);
+			printf("%d\t", tablo2d[ligne][colonne]);
 		}
 		printf("\n");
 	}
+}
 
-
-	system("pause");
-	return 0;
+double moyenne_tab2d(int tablo2d[][NB_MAX_COLONNES], int nb_lignes, int nb_colonnes)
+{
+	double moyenne = 0;
+	for (int i = 0; i < nb_lignes; i++)
+	{
+		for (int j = 0; j < nb_colonnes; j++)
+		{
+			moyenne += tablo2d[i][j];
+		}
+	}
+	moyenne /= nb_lignes * nb_colonnes;
+	return moyenne;
 }
