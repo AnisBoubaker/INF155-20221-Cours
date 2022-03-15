@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tri", "Tri\Tri.vcxproj", "{CD3CE5CE-5E1F-4AB4-991E-A261B3891D5A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chaines", "chaines\chaines.vcxproj", "{4E5E55F0-F04B-42DB-BB51-08212DFE964C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{CD3CE5CE-5E1F-4AB4-991E-A261B3891D5A}.Release|x64.Build.0 = Release|x64
 		{CD3CE5CE-5E1F-4AB4-991E-A261B3891D5A}.Release|x86.ActiveCfg = Release|Win32
 		{CD3CE5CE-5E1F-4AB4-991E-A261B3891D5A}.Release|x86.Build.0 = Release|Win32
+		{4E5E55F0-F04B-42DB-BB51-08212DFE964C}.Debug|x64.ActiveCfg = Debug|x64
+		{4E5E55F0-F04B-42DB-BB51-08212DFE964C}.Debug|x64.Build.0 = Debug|x64
+		{4E5E55F0-F04B-42DB-BB51-08212DFE964C}.Debug|x86.ActiveCfg = Debug|Win32
+		{4E5E55F0-F04B-42DB-BB51-08212DFE964C}.Debug|x86.Build.0 = Debug|Win32
+		{4E5E55F0-F04B-42DB-BB51-08212DFE964C}.Release|x64.ActiveCfg = Release|x64
+		{4E5E55F0-F04B-42DB-BB51-08212DFE964C}.Release|x64.Build.0 = Release|x64
+		{4E5E55F0-F04B-42DB-BB51-08212DFE964C}.Release|x86.ActiveCfg = Release|Win32
+		{4E5E55F0-F04B-42DB-BB51-08212DFE964C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
