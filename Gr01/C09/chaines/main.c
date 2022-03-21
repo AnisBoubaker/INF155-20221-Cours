@@ -41,6 +41,9 @@ int main(void)
 	chaine1[5] = '\0';*/
 
 	//String Copy: copier une chaine de caractères dans une autre
+
+
+
 	strcpy(chaine1, "Allo!");
 	printf("Le contenu de chaine1 après strcpy: %s\n", chaine1);
 
