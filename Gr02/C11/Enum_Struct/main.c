@@ -97,26 +97,36 @@ void etudiant_saisir(etudiant* et)
 {
 	printf("*** Saisie des informations de l'etudiant-e *** \n");
 	printf("Nom: ");
-	fgets((*et).nom, TAILLE_MAX, stdin);
-	(*et).nom[strlen((*et).nom) - 1] = '\0';
+	fgets(et->nom, TAILLE_MAX, stdin);
+	et->nom[strlen(et->nom) - 1] = '\0';
 
 	printf("Prenom: ");
-	fgets((*et).prenom, TAILLE_MAX, stdin);
-	(*et).prenom[strlen((*et).prenom) - 1] = '\0';
+	fgets(et->prenom, TAILLE_MAX, stdin);
+	et->prenom[strlen(et->prenom) - 1] = '\0';
 
 	printf("Code permanent: ");
-	fgets((*et).code_perm, TAILLE_CODE_PERM, stdin);
+	fgets(et->code_perm, TAILLE_CODE_PERM, stdin);
 	(*et).code_perm[strlen((*et).code_perm) - 1] = '\0';
 
 	printf("Note Intra: ");
-	scanf("%lf", &((*et).note_intra));
+	scanf("%lf", &(et->note_intra));
 
 	printf("Note Final: ");
-	scanf("%lf", &((*et).note_final));
+	scanf("%lf", &(et->note_final));
 
 	printf("Note TP1: ");
-	scanf("%lf", &((*et).note_tp1));
+	scanf("%lf", &(et->note_tp1));
 
 	printf("Note TP2: ");
-	scanf("%lf", &(*et).note_tp2);
+	scanf("%lf", &(et->note_tp2));
 }
+
+
+/*
+Écrire la fonction etudiant_moyenne qui calcule la moyenne obtenue
+par un étudiant, en supposant: 
+Intra: 10%
+Final: 40%
+TP1: 25%
+TP2: 25%
+*/
