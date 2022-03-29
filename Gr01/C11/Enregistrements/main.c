@@ -3,38 +3,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "etudiant.h"
+#include "classe.h"
 
-
-#define TAILLE_MAX 100 
-#define TAILLE_CODE_PERM 13
-
-typedef struct etudiant
-{
-	char nom[TAILLE_MAX];
-	char prenom[TAILLE_MAX];
-	char code_perm[TAILLE_CODE_PERM];
-	double intra; 
-	double final;
-	double tp1; 
-	double tp2;
-} etudiant; //Ne pas oublier ler ;
-//typedef struct etudiant etudiant;
 
 //Syntaxe: 
 // typedef type_existant nouveau_nom;
 
 typedef unsigned int uint;
 
-void etudiant_afficher(etudiant et);
-void etudiant_saisir(etudiant* et);
+
+
 
 int main(void)
 {
 	struct etudiant etudiant0;
-
 	etudiant etudiant1; 
+	etudiant* etudiant2; 
 
 	etudiant1.intra = 100;
+
+
+	
 
 
 	//Mettre Lapierre comme nom 
@@ -57,61 +47,42 @@ int main(void)
 
 	etudiant_afficher(etudiant1);
 
+	printf("La moyenne de l'etudiant-e saisi-e: %lf\n", etudiant_moyenne(&etudiant1));
+
+	//Allocation dynamique d'un étudiant
+	etudiant2 = (etudiant*)malloc(sizeof(etudiant));
+	if (etudiant2 == NULL)
+	{
+		printf("Plus de place pour allouer un etudiant!\n");
+		exit(EXIT_FAILURE);
+	}
+
+	//Mettre 80 pour l'intra de etudiant 2:
+	etudiant2->intra = 80;
+
+	//void etudiant_saisir(etudiant* et)
+	etudiant_saisir(etudiant2);
+
+	etudiant_afficher(*etudiant2);
+
+
+
+	etudiant* etudiant3 = NULL;
+	
+	etudiant3 = etudiant_init();
+
+	//void etudiant_saisir(etudiant* et)
+	etudiant_saisir(etudiant3);
+
+
+
+	// Creation d'une classe
+
+	classe* ma_classe = classe_init();
+
+
+
 	system("pause");
 	return 0;
 
 }
-
-
-//Le passage d'un enregistrement se fait par copie!
-void etudiant_afficher(etudiant et)
-{
-	printf("**** Fiche de l'etudiant ***\n");
-	printf("Nom: %s\n", et.nom);
-	printf("Prenom: %s\n", et.prenom);
-	printf("Code Permanent: %s\n", et.code_perm);
-	printf("Intra: %.2lf\n", et.intra);
-	printf("Final: %.2lf\n", et.final);
-	printf("TP1: %.2lf\n", et.tp1);
-	printf("TP2: %.2lf\n", et.tp2);
-}
-
-void etudiant_saisir(etudiant* et)
-{
-	printf("Saisie d'un-e etudiant-e: \n");
-	printf("Nom: ");
-	fgets(et->nom, TAILLE_MAX - 1, stdin);
-	et->nom[strlen(et->nom) - 1] = '\0';
-
-
-	printf("Prenom: ");
-	fgets((*et).prenom, TAILLE_MAX - 1, stdin);
-	(*et).prenom[strlen((*et).prenom) - 1] = '\0';
-
-	printf("Code Permanent: ");
-	fgets((*et).code_perm, TAILLE_CODE_PERM - 1, stdin);
-	(*et).code_perm[strlen((*et).code_perm) - 1] = '\0';
-
-	printf("Intra: ");
-	scanf("%lf", &et->intra);
-
-	printf("Final: ");
-	scanf("%lf", &et->final);
-
-	printf("TP1: ");
-	scanf("%lf", &et->tp1);
-
-	printf("TP2: ");
-	scanf("%lf", &(*et).tp2);
-}
-
-
-/*
-Écrire une fonction etudiant_moyenne, qui calcule la moyenne selon 
-la pondération: 
-
-Intra: 10%
-Final: 40%
-TP1: 25%
-TP2: 25%
-*/
