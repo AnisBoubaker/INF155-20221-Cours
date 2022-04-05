@@ -25,7 +25,8 @@ t_categorie* t_categorie_init(const char* nom,
 	}
 
 	// Allocation de mémoire pour le nom
-	cat_ptr->nom = (char*)malloc(strlen(nom) * sizeof(char));
+	//On ajoute +1 car strlen ne tient pas compte du \0 mais ce-dernier doit faire partie de la chaine
+	cat_ptr->nom = (char*)malloc((strlen(nom)+1) * sizeof(char));
 
 	// Validation 
 	if (cat_ptr->nom == NULL)

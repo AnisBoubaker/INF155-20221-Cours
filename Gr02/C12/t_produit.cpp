@@ -28,7 +28,8 @@ t_produit* t_produit_init(const char* nom,
 	}
 
 	// Allocation de memoire pour le nom
-	produit_ptr->nom = (char*)malloc(strlen(nom) * sizeof(char*));
+	//On ajoute +1 car strlen ne tient pas compte du \0 mais ce-dernier doit faire partie de la chaine
+	produit_ptr->nom = (char*)malloc((strlen(nom)+1) * sizeof(char));
 
 	if (produit_ptr->nom == NULL)
 	{
