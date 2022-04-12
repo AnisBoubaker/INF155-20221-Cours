@@ -1,6 +1,9 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 
 
 #define MAXTX 500 
@@ -22,15 +25,6 @@ typedef struct {
 	int nb_transactions;
 } t_releve;
 //t_releve un_releve;
-
-int main(void)
-{
-	//t_transaction un_tab_transac[100];
-	t_releve mon_releve; 
-
-	//mon_releve.tab_transactions = (t_transaction*)malloc(MAXTX*sizeof(t_transaction));
-}
-
 
 
 double calculer_solde(const t_releve* un_releve)
@@ -55,6 +49,39 @@ double calculer_solde(const t_releve* un_releve)
 	}
 	return solde; 
 }
+
+int enregistrer_transactions(const char* nom_fichier,
+	const t_releve* un_releve,
+	int mois, int annee)
+{
+	FILE* fichier; 
+
+	fichier = fopen(nom_fichier, "w");
+	if (fichier == NULL)
+	{
+		return 0;
+	}
+
+	for (int i = 0; i < un_releve->nb_transactions; i++)
+	{
+		t_transaction t = un_releve->tab_transactions[i];
+		if (t.date.mois == mois && t.date.annee == annee)
+		{
+			fprintf(fichier, "%s\t%.2lf\t%d/%d/%d\n",
+				t.provenance,
+				t.montant,
+				t.date.jour,
+				t.date.mois, 
+				t.date.annee
+				);
+		}
+	}
+
+	fclose(fichier);
+
+	return 1;
+}
+
 
 int main(void)
 {
@@ -90,6 +117,9 @@ int main(void)
 	strcpy(mon_releve.tab_transactions[3].provenance, "CHEQUE #333");
 
 	mon_releve.nb_transactions = 4;
+
+
+	enregistrer_transactions("liste_transactions.txt", &mon_releve, 5, 2020);
 
 	system("pause");
 	return 0; 
